@@ -1,0 +1,441 @@
+@font-face {
+    font-family: logo-font;
+    src: url(media/zekton-free/zekton-rg.otf);
+}
+
+html {
+    overflow-x: hidden !important;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "logo-font";
+}
+
+body {
+    background-color: #1C1C1C;
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Ensure proper positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+
+/* Canvas styling */
+canvas {
+    overflow: hidden;
+    background-color: black;
+    height: 80vh;
+    width: 100vw;
+    filter: blur(3px);
+    position: absolute; /* Make canvas take the full screen */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure canvas stays behind navbar */
+}
+
+#navbar-logo {
+    height: 60%;
+    margin: 5%;
+}
+
+#navbar-VSiD {
+    margin-right: 6%;
+    font-size: 60px;
+    padding-left: 1vw;
+    letter-spacing: 3px;
+}
+
+#logo-set {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 3vw;
+}
+
+#navbar {
+    width: 100vw;
+    height: 10vh;
+    background-color: #2A2A2A;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "logo-font";
+    justify-content: space-between;
+    position: relative; /* Ensure navbar stays on top */
+    z-index: 20; /* Make sure navbar stays above canvas */
+}
+
+/* Underline for links */
+#navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 2rem;
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    /* Make each link's width fit its content */
+    width: fit-content;
+}
+
+/* Adjust hover underline effect */
+#navbar-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    border-radius: 25px;
+}
+
+#navbar-links a:hover::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 1000px) {
+    /* Center align links in the hamburger menu */
+    #navbar-links {
+        display: none;
+        flex-direction: column;
+        background-color: #2A2A2A;
+        position: absolute;
+        top: 12vh;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        z-index: 15; /* Ensure links are above the canvas */
+        align-items: center; /* Center the links */
+    }
+
+    /* Adjust link margin and size for mobile view */
+    #navbar-links a {
+        margin: 1rem 0;
+        font-size: 20px;
+        width: fit-content; /* Keeps each link's underline width constrained */
+        margin: 0.5rem auto; /* Center each link in the dropdown */
+    }
+}
+
+#hamburger-icon {
+    display: none;
+    font-size: 50px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    border-radius: 50%;
+    padding: 0 0 10px;
+    background-color: #2A2A2A;
+    transition: transform 0.125s ease;
+}
+
+#hamburger-icon:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+    #navbar-links {
+        display: none;
+        flex-direction: column;
+        background-color: #2A2A2A;
+        position: absolute;
+        top: 10vh;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        z-index: 15; /* Ensure links are above the canvas */
+    }
+
+    #navbar-links a {
+        margin: 1rem 0;
+        font-size: 20px;
+    }
+
+    #hamburger-icon {
+        display: block;
+    }
+}
+
+#center-logo-section {
+    color: white;
+    width: 100vw;
+    height: 82%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "logo-font";
+    font-size: 3.5rem;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.topic-words {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content within each div */
+    width: 100%; /* Ensure it spans the full width of the parent */
+    text-align: center; /* Center-align text */
+}
+
+#logo-db-section {
+    display: flex;
+    width: 80vw;
+    height: auto;
+    margin: 1% 0 0 0;
+    justify-content: center;
+}
+
+#db-img {
+    width: 10vw;
+    height: auto;
+    object-fit: contain;
+    margin: 1vw 1vw;
+    transition: transform 0.3s ease;
+}
+
+#arrow-img {
+    width: 8vw;
+    height: auto;
+    object-fit: contain;
+    margin: 0 2vw;
+}
+
+#monitor-img {
+    width: 12vw;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+#logo-img {
+    width: 12vw;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+
+
+#logo-img:hover {
+    transform: scale(1.2);
+}
+
+#db-img:hover {
+    transform: scale(1.2);
+}
+
+#monitor-img:hover {
+    transform: scale(1.2);
+}
+
+
+#mission-section {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    text-align:justify;
+    font-family: "logo-font";
+    font-size: 2rem;
+    overflow-wrap: break-word;
+    text-indent: 80px;
+    position: relative;
+    line-height: 1.2;
+}
+#mission-section h4 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height: 1.5em; /* Restrict to one line */
+    transition: max-height 0.6s ease;
+    text-align:justify;
+
+}
+
+#mission-section h4.expanded {
+    white-space: normal;
+    text-align:justify;
+    max-height: 25em; /* Adjust based on desired expanded height */
+}
+
+#toggle-button {
+    background-color: black; /* Initial background color */
+    border: 2px solid #5FFAE0;
+    color: white;
+    padding: 1vh 2vw; 
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 25px;
+    width: auto;
+    transition: transform 0.3s ease, border 0.3s ease, background-color 0.3s ease; /* Transition both scale and background-color */
+    font-family: "logo-font";
+}
+
+/* On hover, change background color and apply scale */
+#toggle-button:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    border: 2px solid#C22ED0;
+}
+
+#mission-section h2 {
+    text-align: center;
+    text-indent: 0px;
+    position: relative;
+    top: 10px;
+}
+
+#mission-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 5vh 0;
+}
+#mission {
+    margin-bottom: 5vh;
+}
+
+#our-team {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 16vh;
+}
+
+#our-team h2{
+    margin-bottom: 10vh;
+}
+
+
+#photo-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    width: 100vw;
+    height: 45vh;
+    text-align: center;
+    margin: 0;
+}
+
+#pfp {
+    width: 18vw;
+    height: auto;
+    border-radius: 25px;
+    margin: 0%;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    #db-img, #arrow-img, #monitor-img, #logo-img {
+        width: 20%; /* Increase flexibility on smaller screens */
+        max-width: 80px;
+    }
+}
+
+.pfp-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin: 0;
+}
+
+.pfp-info-container h5 {
+    font-weight: bold;
+    background-image: linear-gradient(90deg, #FF00FF, #00FFFF); /* Replace with your colors */
+    background-size: 200% 100%;
+    background-clip: text;
+    font-size: 2rem;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientCycle 3s ease infinite; /* Adjust duration as needed */
+    margin-bottom: 2vh;
+}
+
+@media (max-width: 768px) {
+    .pfp-info-container h5 {
+    font-weight: bold;
+    background-image: linear-gradient(90deg, #FF00FF, #00FFFF); /* Replace with your colors */
+    background-size: 200% 100%;
+    background-clip: text;
+    font-size: 1rem;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientCycle 3s ease infinite; /* Adjust duration as needed */
+    margin-bottom: 2vh;
+    }
+}
+
+.pfp-info-container h6 {
+    margin: 0;
+    padding: 2%;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    .pfp-info-container h6 {
+        margin: 0;
+        padding: 2%;
+        font-size: 1rem;
+    }
+}
+
+@keyframes gradientCycle {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 15vw;
+    margin-top: 2.5vh;
+}
+
+.icon {
+    width: 4vw; /* Base size for larger screens */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile size for social icons */
+@media (max-width: 768px) {
+    .icon {
+        width: 8vw; /* Increase icon size on smaller screens */
+        max-width: 50px; /* Optional max size for consistency */
+    }
+}
+
+
+
+
+
+
+.separator-line {
+    width: 60vw;      /* Full width */
+    height: 5px;  
+    border-radius: 25px;    /* Line thickness */
+    background-color: white;  /* Line color */
+    margin: 20px 0;   /* Spacing above and below the line */
+}
+

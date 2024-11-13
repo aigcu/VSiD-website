@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>VSID</title>
+</head>
+<body>
+    <div id="navbar">
+        <div id="logo-set">
+            <h1 id="navbar-VSiD">VSID</h1>
+            <img id="navbar-logo" src="images/VSiD-logo.png" alt="VSiD Logo">
+        </div>
+        
+        <!-- Hamburger Icon for Mobile -->
+        <div id="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        
+        <!-- Navbar Links -->
+        <nav id="navbar-links">
+            <a href="#home">Home</a>
+            <a href="#mission">Mission</a>
+            <a href="#our-team">Our Team</a>
+            <a href="#updates">Updates</a>
+        </nav>
+    </div>
+
+    <canvas id="jscanvas"></canvas>
+    <div id="center-logo-section">
+        <div class="topic-words">
+            Very Small
+        </div>
+        <div class="topic-words">
+            Image Detection
+        </div>
+
+        <div id="logo-db-section">
+            <img id="logo-img" src="images/VSiD-logo.png" alt="VSiD Logo">
+            <img id="arrow-img" src="images/right-arrow.png" alt="arrow-img">
+            <img id="db-img" src="images/VSiD-DB-LOGO.png" alt="DB-img">
+            <img id="arrow-img" src="images/right-arrow.png" alt="arrow-img">
+            <img id="monitor-img" src="images/monitor-logo.png" alt="monitor-img">
+        </div>
+    </div>
+
+    <section id="mission">
+        <div id="mission-section-container">
+            
+            <div id="mission-section">
+                <h2>Our Mission</h2>
+                <h4 class="collapsed">
+                    The VSID (Very Small Image Detection) system will be installed in a hallway 
+                    on a college/university campus. It will consist of a camera connected to a microcontroller 
+                    with onboard Wi-Fi. A TinyML model will be trained to detect thumbs up or 
+                    thumbs down gestures from the video stream. Once trained, the model will be 
+                    packaged and prepared for deployment on the microcontroller. The 
+                    microcontroller will continuously run the model and monitor the video stream. 
+                    The results of the model, collected over a set time period, will be sent to a 
+                    remote database via Wi-Fi. Data analysis will be performed on the results, 
+                    which will be queried from the database and displayed in a website format.
+                </h4>
+            </div>
+            <button onclick="toggleText()" id="toggle-button">Read More</button>
+        </div>  
+    </section>
+
+    <section id="our-team">
+        <h2>Our Team</h2>
+        <div id="photo-container">
+            <div class="pfp-info-container">
+                <h5>Josh Nelson</h5>
+                <img id="pfp" src="images/test-image.png" alt="PFP">
+                <div class="social-buttons">
+                    <a href="mailto:jnelson160@my.gcu.edu"><img class="icon" src="images/Icons/email-icon.png" alt="email"></a>
+                    <a href="https://www.linkedin.com/in/joshuanelson00"><img class="icon" src="images/Icons/linkedin-icon.png" alt="linkedin-icon"></a>
+                    <a href="https://github.com/joshnelson00"><img class="icon" src="images/Icons/github-icon.png" alt="github-icon"></a>
+                </div>
+                <h6>Year: &nbsp; Sophomore</h6>
+                <h6>Major: &nbsp; Computer Science</h6>
+            </div>
+
+            <div class="pfp-info-container">
+                <h5>Derick Ruiz</h5>
+                <img id="pfp" src="images/test-image.png" alt="PFP">
+                <div class="social-buttons">
+                    <a href="mailto:jnelson160@my.gcu.edu"><img class="icon" src="images/Icons/email-icon.png" alt="email"></a>
+                    <a href="https://www.linkedin.com/in/joshuanelson00"><img class="icon" src="images/Icons/linkedin-icon.png" alt="linkedin-icon"></a>
+                    <a href="https://github.com/joshnelson00"><img class="icon" src="images/Icons/github-icon.png" alt="github-icon"></a>
+                </div>
+                <h6>Year: &nbsp; Freshman</h6>
+                <h6>Major: &nbsp; Computer Engineering</h6>
+                
+            </div>
+
+            <div class="pfp-info-container">
+                <h5>Noah Calderon</h5>
+                <img id="pfp" src="images/test-image.png" alt="PFP">
+                <div class="social-buttons">
+                    <a href="mailto:jnelson160@my.gcu.edu"><img class="icon" src="images/Icons/email-icon.png" alt="email"></a>
+                    <a href="https://www.linkedin.com/in/joshuanelson00"><img class="icon" src="images/Icons/linkedin-icon.png" alt="linkedin-icon"></a>
+                    <a href="https://github.com/joshnelson00"><img class="icon" src="images/Icons/github-icon.png" alt="github-icon"></a>
+                </div>
+                <h6>Year: &nbsp; Freshman</h6>
+                <h6>Major: &nbsp; Computer Science</h6>
+
+
+            </div>
+
+            <div class="pfp-info-container">
+                <h5>Noah Robbins</h5>
+                <img id="pfp" src="images/test-image.png" alt="PFP">
+                <div class="social-buttons">
+                    <a href="mailto:jnelson160@my.gcu.edu"><img class="icon" src="images/Icons/email-icon.png" alt="email"></a>
+                    <a href="https://www.linkedin.com/in/joshuanelson00"><img class="icon" src="images/Icons/linkedin-icon.png" alt="linkedin-icon"></a>
+                    <a href="https://github.com/joshnelson00"><img class="icon" src="images/Icons/github-icon.png" alt="github-icon"></a>
+                </div>
+                <h6>Year: &nbsp; Freshman</h6>
+                <h6>Major: &nbsp; Computer Science</h6>
+
+                
+            </div>
+            
+
+        </div>
+    </section>
+
+    <section id="#updates">
+        
+    </section>
+
+    <div class="separator-line"></div>
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+
+    
+    
+    <script src="app.js"></script>
+    <script src="particles.js"></script>
+</body>
+</html>
