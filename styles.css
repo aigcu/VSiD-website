@@ -382,6 +382,17 @@ footer p:hover {
 }
 
 @media (max-width: 768px) {
+    #pfp {
+        width: 20vw;
+        height: 15vh;
+        border-radius: 25px;
+        margin: 0%;
+        object-fit: cover;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+}
+
+@media (max-width: 768px) {
     #db-img, #arrow-img, #monitor-img, #logo-img {
         width: 20%; /* Increase flexibility on smaller screens */
         max-width: 80px;
