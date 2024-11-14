@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 5vh;
+    padding-bottom: 4vh;
 }
 
 /* Canvas styling */
@@ -36,6 +36,42 @@ canvas {
     left: 0;
     z-index: -1; /* Ensure canvas stays behind navbar */
 }
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30vw;
+    font-size: 1.3rem;
+    
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: flex;
+        justify-content: space-evenly;
+        width: 70vw;
+        font-size: 1.3rem;
+    }
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+footer p {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+footer p:hover {
+    text-decoration: none;
+    color: white;
+    transform: scale(1.1);
+}
+
 
 #navbar-logo {
     height: 60%;
@@ -229,14 +265,17 @@ canvas {
 
 #logo-img:hover {
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 #db-img:hover {
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 #monitor-img:hover {
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 
@@ -256,9 +295,9 @@ canvas {
 }
 #mission-section h4 {
     overflow: hidden;
-    white-space: nowrap;
+    white-space:wrap;
     text-overflow: ellipsis;
-    max-height: 1.5em; /* Restrict to one line */
+    max-height: 3.75em; /* Restrict to one line */
     transition: max-height 0.6s ease;
     text-align:justify;
 
@@ -328,12 +367,20 @@ canvas {
 }
 
 #pfp {
-    width: 18vw;
-    height: auto;
+    width: 15vw;
+    height: 35vh;
     border-radius: 25px;
     margin: 0%;
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+#pfp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     #db-img, #arrow-img, #monitor-img, #logo-img {
         width: 20%; /* Increase flexibility on smaller screens */
@@ -411,7 +458,7 @@ canvas {
 
 .icon {
     width: 4vw; /* Base size for larger screens */
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .icon:hover {
@@ -421,21 +468,87 @@ canvas {
 /* Mobile size for social icons */
 @media (max-width: 768px) {
     .icon {
-        width: 8vw; /* Increase icon size on smaller screens */
+        width: 5vw; /* Increase icon size on smaller screens */
         max-width: 50px; /* Optional max size for consistency */
     }
 }
 
+#update-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Align flex items to the left */
+    width: 60vw;
+    padding: 3vh 0;
+    margin: 0 0 5vh 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#update-section h2 {
+    font-size: 3rem;
+}
+
+.week-update {
+    width: 100%;
+    text-align: left;  /* Ensure text inside this div is left-aligned */
+    flex-direction: column;
+    display: flex;
+    padding: 0 5vw;   /* Apply padding on both sides */
+    box-sizing: border-box;  /* Ensure padding is part of the width calculation */
+}
+
+.week-update h3 {
+    margin-top:2vh;
+    margin-bottom: 0%;
+}
 
 
+.update-line {
+    width: 100%;      /* Full width */
+    height: 3px;  
+    border-radius: 25px;    /* Line thickness */
+    background-color: white;  /* Line color */
+    margin:0;   /* Spacing above and below the line */
+}
 
+@media (max-width: 768px) {
+    .update-line {
+        width: 100%;      /* Full width */
+        height: 5px;  
+        border-radius: 25px;    /* Line thickness */
+        background-color: white;  /* Line color */
+        margin:0;   /* Spacing above and below the line */
+    }
+}
 
+#updates ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+#updates li {
+    margin: 0.5rem; /* Optional, to give some space between items */
+    flex: 1 0 100%; /* Make each item take up 100% of the container width on smaller screens */
+    max-width: 100%; /* Ensure they don't overflow the container */
+}
 
 .separator-line {
-    width: 60vw;      /* Full width */
+    width: 20vw;      /* Full width */
     height: 5px;  
     border-radius: 25px;    /* Line thickness */
     background-color: white;  /* Line color */
-    margin: 20px 0;   /* Spacing above and below the line */
+    margin:0;   /* Spacing above and below the line */
 }
+
+@media (max-width: 768px) {
+    .separator-line {
+        width: 60vw;      /* Full width */
+        height: 5px;  
+        border-radius: 25px;    /* Line thickness */
+        background-color: white;  /* Line color */
+        margin:0;   /* Spacing above and below the line */
+    }
+}
+
+
 
