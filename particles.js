@@ -17,7 +17,6 @@ function resizeCanvas() {
     ctx.scale(devicePixelRatio, devicePixelRatio);
 }
 resizeCanvas();   
-
 function create() {
   time = 0;
   count = 0;
