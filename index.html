@@ -52,15 +52,14 @@
             <div id="mission-section">
                 <h2>Our Mission</h2>
                 <h4 class="collapsed">
-                    The VSID (Very Small Image Detection) system will be installed in a hallway 
-                    on a college/university campus. It will consist of a camera connected to a microcontroller 
+                    The VSID (Very Small Image Detection) system will be implemented in various locations 
+                    on a college/university campus. It will consist of a camera connected to microcontrollers 
                     with onboard Wi-Fi. A TinyML model will be trained to detect thumbs up or 
-                    thumbs down gestures from the video stream. Once trained, the model will be 
-                    packaged and prepared for deployment on the microcontroller. The 
+                    thumbs down gestures from the video stream from students and faculty. The 
                     microcontroller will continuously run the model and monitor the video stream. 
                     The results of the model, collected over a set time period, will be sent to a 
                     remote database via Wi-Fi. Data analysis will be performed on the results, 
-                    which will be queried from the database and displayed in a website format.
+                    which will be displayed and used to indicate a student/faculty satisfaction rate.
                 </h4>
             </div>
             <button onclick="toggleText()" id="toggle-button">Read More</button>
@@ -211,19 +210,89 @@
             <div class="update-line"></div>
            
             <div class="week-update">
-                 <h3>Feb 16 - Feb. 23</h3>
+                 <h3>Feb. 16 - Feb. 23</h3>
                  <ul>
-                     <li>Roboflow used to train YOLO model with thumbs up/down image databases</li>
+                     <li>Roboflow used to train YOLO model with thumbs up/down image datasets</li>
                      <li>The model accurately detects thumb direction </li>
                      <li>Working to put model on ESP32</li>
                   </ul>
             </div>
             <div class="update-line"></div>
     
+            <div class="week-update">
+                <h3>Feb. 24 - Mar. 2</h3>
+                <ul>
+                    <li>Refined RoboFlow Model dataset to more accurately detect thumbs up and thumbs down</li>
+                    <li>Created proof of concept demo using the Roboflow model</li>
+                 </ul>
+           </div>
+           <div class="update-line"></div>
+
+           <div class="week-update">
+            <h3>Mar. 3 - Mar. 9 </h3>
+            <ul>
+                <li>Research into using Yolov4 Object Detection model</li>
+                <li>Working on getting a Tensorflow Yolov4 object detection framework using a general weights file</li>
+             </ul>
+            </div>
+            <div class="update-line"></div>
+
+            <div class="week-update">
+                <h3>Mar. 10 - Mar. 16 </h3>
+                <ul>
+                    <li>Gathered/annotated a variety of thumbs up and thumbs down images and combined them with Roboflow dataset</li>
+                    <li>Generated a custom weights file using the thumbs up and thumbs down dataset using a Google Collab Notebook</li>
+                </ul>
+            </div>
+            <div class="update-line"></div>
+            
+            <div class="week-update">
+                <h3>Mar. 17 - Mar. 23 </h3>
+                <ul>
+                    <li>Working on getting the custom weights file to work with the Tensorflow Yolov4 object detection framework</li>
+                    <li>Prepared a presentation with the Roboflow demo to present at GCU's Canyon Undergraduate Research Symposium</li>
+                </ul>
+            </div>
+            <div class="update-line"></div>
+            
+            <div class="week-update">
+                <h3>Mar. 24 - Apr. 6 </h3>
+                <ul>
+                    <li>Presented the VSiD demo at GCU's Canyon Undergraduate Research Symposium</li>
+                    <li>Gained feedback and support from GCU President Brian Muller</li>
+                </ul>
+            </div>
+            <div class="update-line"></div>
+            
+            <div class="week-update">
+                <h3>Apr. 7 - Apr. 13 </h3>
+                <ul>
+                    <li>Successfully got the Tensorflow Yolov4 Object Detection framework to work with the thumbs weights file</li>
+                    <li>Prepared the presentation for the CAIR final showcase (used the Roboflow Demo)</li>
+                </ul>
+            </div>
+            <div class="update-line"></div>
+            
+            <div class="week-update">
+                <h3>Apr. 14 - Apr. 20 </h3>
+                <ul>
+                    <li>Presented the VSiD progress and demo at the CAIR final showcase</li>
+                </ul>
+            </div>
+            <div class="update-line"></div>
+
+            <div class="week-update">
+                <h3>Apr. 20 - Present </h3>
+                <ul>
+                    <li>Currently working on getting the Tensorflow Yolov4 Thumbs Object Detection to work on the ESP32</li>
+                </ul>
+            </div>
+            <div class="update-line"></div>
+
             <!--
 
     <div class="week-update">
-          <h3>Jan 26 - Feb. 1</h3>
+          <h3>May 00 - May 00</h3>
           <ul>
              <li>Hello World 1</li>
              <li>Hello World 2</li>
