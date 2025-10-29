@@ -3,326 +3,364 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Blog – CAIR</title>
+
+    <!--Core Styles-->
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <title>VSID</title>
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .hero-section { position:relative; background: linear-gradient(160deg,#522398 0%, #331970 50%, #150c25 100%); color:#fff; text-align:center; padding:15rem 1rem; overflow:hidden; }
+        #particles-hero { position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; }
+        .hero-section .container { position:relative; z-index:1; margin-top:5rem; }
+        .section-title { color:#7933e1; font-weight:600; margin-bottom:1.5rem; }
+        .update-box { background:#150c25; color:#fff; border-left:6px solid #7933e1; box-shadow:0 3px 8px rgba(0,0,0,.3); padding:2rem; margin-bottom:1.5rem; transition: box-shadow 0.3s ease; }
+        .update-box:hover { box-shadow:0 0 15px rgba(255,255,255,0.8); }
+        .member-card { background:#150c25; color:#fff; border:1px solid #7933e1; box-shadow:0 2px 6px rgba(0,0,0,.4); padding:1.5rem; transition: box-shadow 0.3s ease; }
+        .member-card:hover { box-shadow:0 0 15px rgba(255,255,255,0.8); }
+        .member-card:hover { box-shadow:0 5px 12px rgba(0,0,0,.15); transition:.2s; }
+        .member-card .text-muted { color:#b0b8c0 !important; }
+        .icons { color:#7933e1; text-decoration:none; transition:text-shadow 0.3s ease; }
+        .icons:hover { text-shadow:0 0 8px rgba(255,255,255,0.9); }
+        .icons i { font-size:1.4rem; }
+        .navbar-nav .nav-link { transition:text-shadow 0.3s ease; }
+        .navbar-nav .nav-link:hover { text-shadow:0 0 8px rgba(255,255,255,0.9); }
+        .updates-section { background-color:#111219; }
+        .team-section { background-color:#111219; }
+        /* Navbar color override */
+        .navbar-dark { background-color: #150c25 !important; }
+        .navbar { height: 100px; }
+        .navbar .container { padding-top: 1rem; }
+        .navbar-brand { margin-left: 0; }
+    </style>
 </head>
 <body>
-    <div id="navbar">
-        <div id="logo-set">
-            <h1 id="navbar-VSiD">VSID</h1>
-            <img id="navbar-logo" src="images/VSiD-logo.png" alt="VSiD Logo">
+    <!--Header-->
+        <div class="row fixed-top header mx-auto">
+        <!--Nav-->
+            <nav class="navbar navbar-expand-lg py-3">
+                <a class="navbar-brand ms-3 ms-md-5" href="https://www.aigcu.org"><img class="logo" src="images/whiteLogo.png" alt=""></a>
+                <button class="navbar-toggler ml-auto me-3 navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end me-4" id="navbarNav">
+                  <ul class="navbar-nav ms-3 mt-3 ms-lg-0 mt-lg-0">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#project">Project</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#updates">Updates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>  
         </div>
-        
-        <!-- Hamburger Icon for Mobile -->
-        <div id="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
-        
-        <!-- Navbar Links -->
-        <nav id="navbar-links">
-            <a href="#home">Home</a>
-            <a href="#mission">Mission</a>
-            <a href="#our-team">Our Team</a>
-            <a href="#updates">Updates</a>
-        </nav>
-    </div>
 
-    <section id="home">
-        <div id="center-logo-section">
-            <canvas id="jscanvas"></canvas>
-            <div class="topic-words">
-                Very Small
-            </div>
-            <div class="topic-words">
-                Image Detection
-            </div>
-
-            <div id="logo-db-section">
-                <img id="logo-img" src="images/VSiD-logo.png" alt="VSiD Logo">
-                <img id="arrow-img" src="images/right-arrow.png" alt="arrow-img">
-                <img id="db-img" src="images/VSiD-DB-LOGO.png" alt="DB-img">
-                <img id="arrow-img" src="images/right-arrow.png" alt="arrow-img">
-                <img id="monitor-img" src="images/monitor-logo.png" alt="monitor-img">
-            </div>
+    <!--Hero / Project Info-->
+    <section class="hero-section" id="project">
+        <div id="particles-hero"></div>
+        <div class="container">
+            <h1 class="display-5 fw-bold" id="projectName">VSiD: Very Small Image Detection</h1>
+            <p class="lead mt-3" id="projectTagline">The VSID system will be implemented in various locations 
+                    on a Grand Canyon University's campus. Consisting of a camera connected to a microcontroller with onboard wifi,
+                    a TinyML model will detect thumbs up or thumbs down gestures 
+                    from a video stream indicating a satisfaction rate from students and faculty.</p>
         </div>
     </section>
 
-    <section id="mission">
-        <div id="mission-section-container">
-            
-            <div id="mission-section">
-                <h2>Our Mission</h2>
-                <h4 class="collapsed">
-                    The VSID (Very Small Image Detection) system will be implemented in various locations 
-                    on a college/university campus. It will consist of a camera connected to microcontrollers 
-                    with onboard Wi-Fi. A TinyML model will be trained to detect thumbs up or 
-                    thumbs down gestures from the video stream from students and faculty. The 
-                    microcontroller will continuously run the model and monitor the video stream. 
-                    The results of the model, collected over a set time period, will be sent to a 
-                    remote database via Wi-Fi. Data analysis will be performed on the results, 
-                    which will be displayed and used to indicate a student/faculty satisfaction rate.
-                </h4>
-            </div>
-            <button onclick="toggleText()" id="toggle-button">Read More</button>
-        </div>  
-    </section>
-
-    <section id="our-team">
-        <h2>Our Team</h2>
-        <div id="photo-container">            
-            <div class="pfp-info-container">
-                <h5>Noah Calderon</h5>
-                <img id="pfp" src="images/NoahC.jpg" alt="PFP">
-                <div class="social-buttons">
-                    <a href="mailto:noah.calderonz2006@gmail.com"><img class="icon" src="images/Icons/email-icon.png" alt="email"></a>
-                    <a href="https://www.linkedin.com/in/noahcalderon"><img class="icon" src="images/Icons/linkedin-icon.png" alt="linkedin-icon"></a>
-                    <a href="https://github.com/NoahCalderon"><img class="icon" src="images/Icons/github-icon.png" alt="github-icon"></a>
-                </div>
-                <h6>Year: &nbsp; Sophomore</h6>
-                <h6>Major: &nbsp; Computer Science</h6>
-            </div>
-
-            <div class="pfp-info-container">
-                <h5>Derick Ruiz</h5>
-                <img id="pfp" src="images/DerickR.jpg" alt="PFP">
-                <div class="social-buttons">
-                    <a href="mailto:Druiz72@my.gcu.edu"><img class="icon" src="images/Icons/email-icon.png" alt="email"></a>
-                    <a href="https://www.linkedin.com/in/DerickRuiz000"><img class="icon" src="images/Icons/linkedin-icon.png" alt="linkedin-icon"></a>
-                    <a href="https://github.com/DerickRuiz"><img class="icon" src="images/Icons/github-icon.png" alt="github-icon"></a>
-                </div>
-                <h6>Year: &nbsp; Sophomore</h6>
-                <h6>Major: &nbsp; Computer Engineering</h6>
-            </div>
-
-            <div class="pfp-info-container">
-                <h5>Noah Robbins</h5>
-                <img id="pfp" src="images/NoahR.jpg" alt="PFP">
-                <div class="social-buttons">
-                    <a href="mailto:noahmsr1@gmail.com"><img class="icon" src="images/Icons/email-icon.png" alt="email"></a>
-                    <a href="https://www.linkedin.com/in/NoahRobbins00"><img class="icon" src="images/Icons/linkedin-icon.png" alt="linkedin-icon"></a>
-                    <a href="https://github.com/Red3tar"><img class="icon" src="images/Icons/github-icon.png" alt="github-icon"></a>
-                </div>
-                <h6>Year: &nbsp; Junior</h6>
-                <h6>Major: &nbsp; Computer Science</h6>
-            </div>
-
-            <div class="pfp-info-container">
-                <h5>TBD</h5>
-                <img id="pfp" src="#" alt="">
-                <div class="social-buttons">
-                    <a href="#"><img class="icon" src="images/Icons/email-icon.png" alt="email"></a>
-                    <a href="#"><img class="icon" src="images/Icons/linkedin-icon.png" alt="linkedin-icon"></a>
-                    <a href="#"><img class="icon" src="images/Icons/github-icon.png" alt="github-icon"></a>
-                </div>
-                <h6>Year: &nbsp; TBD</h6>
-                <h6>Major: &nbsp; TBD</h6>
-            </div>
-            
-
-        </div>
-    </section>
-    
-    <section id="updates">
-        <div id="update-section">
-            <h2>Updates</h2>
-            <div class="update-line"></div>
-            <!--This is what you can add-->
-            <div class="week-update">
-                <h3>Nov. 10 - Nov. 17</h3>
+    <!--Continuous Blog / Update Box-->
+    <section id="updates" class="updates-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Project Updates</h2>
+           
+           
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">November 10, 2024 - November 17, 2024</p>
                 <ul>
                     <li>Delegated sections of research (Hardware/Embedded Systems & Machine Learning)</li>
                     <li>Began research in respective sections</li>
                     <li>Completed VSID website structure </li>
                 </ul>
             </div>
-            <div class="update-line"></div>
-            <div class="week-update">
-                <h3>Nov. 17 - Nov. 23</h3>
+
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">November 17, 2024 - November 23, 2024</p>
                 <ul>
                     <li>Documented TensorFlow LIte (LiteRT)</li>
                     <li>Purchased ESP32 w/Modular Camera</li>
                     <li>Documented Realtek AMB82 Mini</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
 
-            <div class="week-update">
-                <h3>Nov. 24 - Nov. 30</h3>
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">November 24, 2024 - November 30, 2024</p>
                 <ul>
                     <li>Obtained ESP32 microcontroller</li>
                     <li>Tested ESP32 Board and WifiManager in Arduino IDE</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
 
-            <div class="week-update">
-                <h3>Dec. 1 - Dec. 7</h3>
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">December 1, 2024 - December 7, 2024</p>
                 <ul>
                     <li>Began testing ESP32 Microcontroller with Arduino IDE</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
 
-            <div class="week-update">
-                <h3>Dec. 8 - Dec. 14</h3>
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">December 8, 2024 - December 14, 2024</p>
                 <ul>
                     <li>Obtained additional ESP32 microcontroller to continue research</li>
                     <li>Added LinkedIn and Email links to VSiD website </li>
                     <li>Assigned research sections for Tiny ML research (Hand Gestures, Person Position, ML Research)</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
 
-            <div class="week-update">
-                <h3>Dec. 15 - Dec. 21</h3>
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">December 15, 2024 - December 21, 2024</p>
                 <ul>
                     <li>Began research for assigned Tiny ML research sections</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
 
-            <div class="week-update">
-              <h3>Dec. 22 - Dec. 28</h3>
-              <ul>
-                <li>Researched possible alternatives for camera module</li>
-                <li>Continued research on Tiny ML research sections</li>
-              </ul> 
-            </div>
-              <div class ="update-line"></div>
-
-            <div class="week-update">
-                <h3>Jan. 5 - Jan. 11</h3>
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">December 22, 2024 - December 28, 2024</p>
                 <ul>
-                   <li>Re-evaluated Model Choices</li>
-                   <li>Club Meeting and Presentation</li>
+                    <li>Researched possible alternatives for camera module</li>
+                    <li>Continued research on Tiny ML research sections</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
 
-            <div class="week-update">
-                <h3>Jan. 12 - Jan. 18</h3>
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">January 5, 2025 - January 11, 2025</p>
                 <ul>
-                   <li>Team Meeting to Re-Align Ideas and Motives</li>
-                   <li>Started Looking at RoboFlow</li>
+                  <li>Re-evaluated Model Choices</li>
+                  <li>Club Meeting and Presentation</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
-           
-            <div class="week-update">
-                 <h3>Feb. 16 - Feb. 23</h3>
-                 <ul>
-                     <li>Roboflow used to train YOLO model with thumbs up/down image datasets</li>
-                     <li>The model accurately detects thumb direction </li>
-                     <li>Working to put model on ESP32</li>
-                  </ul>
+
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">January 12, 2025 - January 18, 2025</p>
+                <ul>
+                    <li>Team Meeting to Re-Align Ideas and Motives</li>
+                    <li>Started Looking at RoboFlow</li>
+                </ul>
             </div>
-            <div class="update-line"></div>
-    
-            <div class="week-update">
-                <h3>Feb. 24 - Mar. 2</h3>
+
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">January 19, 2025 - February 15, 2025</p>
+                <ul>
+                    <li>Started developing hand gesture object detection model in RoboFlow</li>
+                </ul>
+            </div>
+
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">February 16, 2025 - February 23, 2025</p>
+                <ul>
+                    <li>Roboflow used to train YOLO model with thumbs up/down image datasets</li>
+                    <li>The model accurately detects thumb direction </li>
+                    <li>Working to put model on ESP32</li>
+                </ul>
+            </div>
+
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">February 24, 2025 - March 2, 2025</p>
                 <ul>
                     <li>Refined RoboFlow Model dataset to more accurately detect thumbs up and thumbs down</li>
                     <li>Created proof of concept demo using the Roboflow model</li>
-                 </ul>
-           </div>
-           <div class="update-line"></div>
-
-           <div class="week-update">
-            <h3>Mar. 3 - Mar. 9 </h3>
-            <ul>
-                <li>Research into using Yolov4 Object Detection model</li>
-                <li>Working on getting a Tensorflow Yolov4 object detection framework using a general weights file</li>
-             </ul>
+                </ul>
             </div>
-            <div class="update-line"></div>
 
-            <div class="week-update">
-                <h3>Mar. 10 - Mar. 16 </h3>
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">March 3, 2025 - March 9, 2025</p>
+                <ul>
+                    <li>Research into using Yolov4 Object Detection model</li>
+                    <li>Working on getting a Tensorflow Yolov4 object detection framework using a general weights file</li>
+                </ul>
+            </div>
+
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">March 10, 2025 - March 16, 2025</p>
                 <ul>
                     <li>Gathered/annotated a variety of thumbs up and thumbs down images and combined them with Roboflow dataset</li>
                     <li>Generated a custom weights file using the thumbs up and thumbs down dataset using a Google Collab Notebook</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
-            
-            <div class="week-update">
-                <h3>Mar. 17 - Mar. 23 </h3>
+
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">March 17, 2025 - March 23, 2025</p>
                 <ul>
                     <li>Working on getting the custom weights file to work with the Tensorflow Yolov4 object detection framework</li>
                     <li>Prepared a presentation with the Roboflow demo to present at GCU's Canyon Undergraduate Research Symposium</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
-            
-            <div class="week-update">
-                <h3>Mar. 24 - Apr. 6 </h3>
+
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">March 24, 2025 - April 6, 2025</p>
                 <ul>
                     <li>Presented the VSiD demo at GCU's Canyon Undergraduate Research Symposium</li>
                     <li>Gained feedback and support from GCU President Brian Muller</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
-            
-            <div class="week-update">
-                <h3>Apr. 7 - Apr. 13 </h3>
+
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">April 7, 2025 - April 13, 2025</p>
                 <ul>
                     <li>Successfully got the Tensorflow Yolov4 Object Detection framework to work with the thumbs weights file</li>
                     <li>Prepared the presentation for the CAIR final showcase (used the Roboflow Demo)</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
-            
-            <div class="week-update">
-                <h3>Apr. 14 - Apr. 20 </h3>
-                <ul>
-                    <li>Presented the VSiD progress and demo at the CAIR final showcase</li>
-                </ul>
-            </div>
-            <div class="update-line"></div>
 
-            <div class="week-update">
-                <h3>Apr. 20 - Sep. 15 </h3>
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">April 20, 2025 - September 15, 2025</p>
                 <ul>
                     <li>Currently working on getting the Tensorflow Yolov4 Thumbs Object Detection to work on the ESP32</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
 
-
-            <div class="week-update">
-                <h3>Sep. 15 - Oct. 20 </h3>
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">September 15, 2025 - October 20, 2025</p>
                 <ul>
                     <li>Quantizing Yolov4 Thumbs Object Detection model in order to fit the compatibility requirements of the ESP32</li>
                     <li>Developing Yolov4 Person Object Detection model to detect a person for the Thumbs model</li>
                     <li>Continuing to research alternative options for model implementations</li>
                 </ul>
             </div>
-            <div class="update-line"></div>
+            
+            
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">October 21, 2025 - October 27, 2025</p>
+                <ul>
+                    <li>Continuing quatization of Yolov4 Thumbs Object Detection model</li>
+                    <li>Continuing development of Yolov4 Person Object Detection model</li>
+                    <li>Updated to new CAIR website format</li>
+                </ul>
+            </div>
+            
 
-
-            <!--
-
-    <div class="week-update">
-          <h3>Nov 00 - Nov 00</h3>
-          <ul>
-             <li>Hello World 1</li>
-             <li>Hello World 2</li>
-             <li>Hello World 3</li>
-          </ul>
-    </div>
-    <div class="update-line"></div>
-        -->
+             <!---
+            <div class="update-box mx-auto" style="max-width:850px;">
+                <p class="mb-0" id="projectUpdate">Month Day, 2025 - Month Day, 2025</p>
+                <ul>
+                    <li>hello world 0</li>
+                    <li>hello world 1</li>
+                    <li>hello world 2</li>
+                </ul>
+            </div>
+            -->
 
 
         </div>
     </section>
 
-    <div class="separator-line"></div>
-    <footer>
-        <p><a href="https://aigcu.org/">CAIR</a></p>
-        <p><a href="https://github.com/aigcu">Github</a></p>
+    <!--Team Members-->
+    <section class="py-5 team-section" id="team">
+        <div class="container">
+            <h2 class="section-title text-center">Meet the Team</h2>
+            <div class="row g-4 justify-content-center">
+                <!--Member Loop-->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="member-card text-center h-100">
+                        <h5 class="fw-bold mb-1">Noah Calderon</h5>
+                        <p class="text-muted mb-2">Computer Science</p>
+                        <div>
+                            <a href="https://www.linkedin.com/in/noahcalderon" class="icons me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/NoahCalderon" class="icons me-2"><i class="fab fa-github"></i></a>
+                            <a href="mailto:noah.calderonz2006@gmail.com" class="icons"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="member-card text-center h-100">
+                        <h5 class="fw-bold mb-1">Derick Ruiz</h5>
+                        <p class="text-muted mb-2">Computer Engineering</p>
+                        <div>
+                            <a href="https://www.linkedin.com/in/DerickRuiz000" class="icons me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/DerickRuiz" class="icons me-2"><i class="fab fa-github"></i></a>
+                            <a href="mailto:Druiz72@my.gcu.edu" class="icons"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="member-card text-center h-100">
+                        <h5 class="fw-bold mb-1">Noah Robbins</h5>
+                        <p class="text-muted mb-2">Computer Science</p>
+                        <div>
+                            <a href="https://www.linkedin.com/in/NoahRobbins00" class="icons me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Red3tar" class="icons me-2"><i class="fab fa-github"></i></a>
+                            <a href="mailto:noahr6995@gmail.com" class="icons"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="member-card text-center h-100">
+                        <h5 class="fw-bold mb-1">TBD</h5>
+                        <p class="text-muted mb-2">TBD</p>
+                        <div>
+                            <a href="#" class="icons me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="icons me-2"><i class="fab fa-github"></i></a>
+                            <a href="mailto:member4@example.com" class="icons"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+               <!--
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="member-card text-center h-100">
+                        <h5 class="fw-bold mb-1">Member 5</h5>
+                        <p class="text-muted mb-2">IT Management</p>
+                        <div>
+                            <a href="#" class="icons me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="icons me-2"><i class="fab fa-github"></i></a>
+                            <a href="mailto:member4@example.com" class="icons"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            -->
+            
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-dark text-center text-white py-3">
+        <div class="container">
+            <small>&copy; 2025 — Canyon AI Research</small>
+        </div>
     </footer>
 
+    <!--JS Bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-hero", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#7933e1" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5 },
+                size: { value: 3 },
+                line_linked: { enable: true, distance: 150, color: "#7933e1", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2 }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" } },
+                modes: { repulse: { distance: 100, duration: 0.4 } }
+            },
+            retina_detect: true
+        });
+    </script>
     <script src="app.js"></script>
-    <script src="particles.js"></script>
 </body>
 </html>
